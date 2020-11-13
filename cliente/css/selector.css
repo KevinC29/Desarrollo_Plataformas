@@ -1,0 +1,41 @@
+#fila1{
+    color: teal;
+}
+
+#fila2{
+    color: red;
+}
+
+#fila3{
+    color: blue;
+}
+
+#fila4{
+    color: orange;
+}
+
+#fila5{
+    color: orangered;
+}
+
+#fila6{
+    color: cadetblue;
+}
+
+#fila7{
+    color: purple;
+}
+
+#fila8{
+    color: greenyellow;
+}
+
+/*Segunda columna*/
+
+td+td {
+    background-color: orange;
+}
+
+td+td+td {
+    background-color: violet;
+}
