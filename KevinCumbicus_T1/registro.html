@@ -1,0 +1,53 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/registro.css">
+    <link rel="stylesheet" href="fonts/1/css/fontello.css">
+    <link rel="stylesheet" href="fonts/2/css/fontello.css">
+    <title>REGISTER</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo.jpg" width="75" height="75" />
+            </a>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="imagenes/menu.png" alt="" width="75" height="75" /></label>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html"><span class="icon-warehouse"></span>Inicio</a></li>
+                    <li><a href="buscar.html"><span class="icon-search"></span>Buscar</a></li>
+                    <li><a href="nueva.html"><span class="icon-plus-circled"></span>Nueva Foto</a></li>
+                    <li><a href="favoritas.html"><span class="icon-star"></span>Favoritas</a></li>
+                    <li><a href="acerca.html"><span class="icon-user-times"></span>Logout</a></li>
+                    <li><a href="login.html"><span class="icon-user">Login</a></li>
+                    <li><a href="registro.html"><span class="icon-user-plus"></span>Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tema">
+            <p>
+                Conoce la aplicacion que te permite visualizar sobre las
+                mejores imagenes artísticas del momento, descargarlas y valorarlas.
+            </p>
+        </div>
+        <form >
+            <h2>REGISTER</h2>
+            <input type="text" placeholder="&#128100; Nombres" name="nombres" required minlength="4" maxlength="20" pattern="[A-Za-z0-9]{4-20}" autofocus>
+            <input type="text" placeholder="&#128100; Apellidos" name="apellidos" required minlength="4" maxlength="20" pattern="[A-Za-z0-9]{4-20}" autofocus>
+            <input type="email" placeholder="&#128231; Email" name="email" required minlength="4" maxlength="30" pattern="[A-Za-z0-9]{4-30}" autofocus>
+            <input type="password" placeholder="&#128272; Contraseña" name="clave" required minlength="6" maxlength="20" pattern="[A-Za-z0-9_-]{6-20}" autofocus>
+            <input type="password" placeholder="&#128272; Confirmar Contraseña" name="confirmar_clave" minlength="6" maxlength="20" pattern="[A-Za-z0-9_-]{6-20}" autofocus>
+            <input type="submit" value="Register">
+            <a href="login.html"><input type="button" value="Login"></a>
+        </form>
+    </main>
+</body>
+
+</html>

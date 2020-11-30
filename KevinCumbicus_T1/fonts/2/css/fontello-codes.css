@@ -1,0 +1,8 @@
+
+.icon-plus-circled:before { content: '\e800'; } /* '' */
+.icon-star:before { content: '\e801'; } /* '' */
+.icon-user:before { content: '\e802'; } /* '' */
+.icon-search:before { content: '\e803'; } /* '' */
+.icon-warehouse:before { content: '\e840'; } /* '' */
+.icon-user-plus:before { content: '\f234'; } /* '' */
+.icon-user-times:before { content: '\f235'; } /* '' */

@@ -1,0 +1,62 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/nueva.css">
+    <link rel="stylesheet" href="fonts/1/css/fontello.css">
+    <link rel="stylesheet" href="fonts/2/css/fontello.css">
+    <title>FOTOS</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <a href="#" class="logo">
+                <img src="imagenes/logo.jpg" width="75" height="75" />
+            </a>
+            <input type="checkbox" id="btn-menu">
+            <label for="btn-menu"><img src="imagenes/menu.png" alt="" width="75" height="75" /></label>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="index.html"><span class="icon-warehouse"></span>Inicio</a></li>
+                    <li><a href="buscar.html"><span class="icon-search"></span>Buscar</a></li>
+                    <li><a href="nueva.html"><span class="icon-plus-circled"></span>Nueva Foto</a></li>
+                    <li><a href="favoritas.html"><span class="icon-star"></span>Favoritas</a></li>
+                    <li><a href="acerca.html"><span class="icon-user-times"></span>Logout</a></li>
+                    <li><a href="login.html"><span class="icon-user">Login</a></li>
+                    <li><a href="registro.html"><span class="icon-user-plus"></span>Registro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="main">
+        <div class="tema">
+            <p>
+                Conoce la aplicacion que te permite visualizar sobre las
+                mejores imagenes artísticas del momento, descargarlas y valorarlas.
+            </p>
+        </div>
+        <form>
+            <div id="datos">
+                <h2>DATOS</h2>
+                <input type="text" placeholder="Titulo" name="titulo" required maxlength="100" autofocus>
+                <input type="textarea" placeholder="Descripcion" name="descripcion" required maxlength="300" autofocus>
+                <input type="text" placeholder="&#127991; Etiqueta" name="etiqueta" required autofocus>
+            </div>
+            <div id="imagen">
+                <h2>IMAGEN</h2>
+                <label for="seleccionar" id="reemplazar"><img src="imagenes/nofoto.png" id="nofoto"></label>
+            </div>
+            <div id="botones">
+                <input type="file" placeholder="&#128444; Seleccionar" id="seleccionar" value="seleccionar" autofocus>
+                <input type="reset" placeholder="&#128444; Eliminar Foto" value="eliminar" autofocus>
+            </div>
+            <div id="submit">
+                <input type="submit" value="Agregar">
+            </div>
+        </form>
+    </main>
+</body>
+
+</html>

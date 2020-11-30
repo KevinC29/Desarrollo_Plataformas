@@ -1,0 +1,125 @@
+body{
+    background-image: url(../imagenes/1.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 0;
+}
+.header{
+    background: #333;
+    color: white;
+}
+
+.header a{
+    color: white;
+    text-decoration: none;
+}
+
+.logo-nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+.navigation ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    display: flex;
+}
+
+.navigation ul li {
+    display: inline-block;
+}
+
+.navigation ul li a{
+    display: block;
+    padding: 10px;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+}
+.navigation ul li a:hover{
+    background: darkgrey;
+}
+
+.header .logo-nav-container #btn-menu{
+    display: none;
+}
+.header .logo-nav-container label{
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    display: none;
+}
+
+.header .logo-nav-container label:hover{
+    cursor: pointer;
+    background: #333;
+}
+
+@media (max-width:768px){
+    .header .logo-nav-container label{
+        display: block;
+        margin: 0;
+    }
+    .navigation {
+        position: relative;
+        background: darkgray;
+        width: 100%;
+        margin-top: -100%;
+        transition: all 500ms ease;
+    }
+    .navigation ul{
+        flex-direction: column;
+    }
+    .navigation li{
+        border-top: 1px solid #fffa;
+    }
+
+    .header .logo-nav-container #btn-menu:checked ~ .navigation{
+        margin: 0;
+    }
+}
+
+.main{
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+    color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container{
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#color{
+    color: black;
+}
+p{
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+}
+img{
+    cursor: pointer;
+    margin-left: 30px;
+}
+.main .fotos{
+    margin: auto;
+}
+
+.main .fotos img{
+    width: 400px;
+    height: 400px;
+}
