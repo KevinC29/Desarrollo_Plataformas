@@ -1,0 +1,189 @@
+<!Doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/detalle.css">
+    <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/9534f42a55.js" crossorigin="anonymous"></script>
+    <title>Practica Bootstrapt</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Bootstrapt</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal"
+                        data-target="#register">Registrarse</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" data-toggle="modal" data-target="#login">Login</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="consultas.html">Administración de Usuarios</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- INICIO LOGIN-->
+    <div class="modal" tabindex="-1" role="dialog" id="login">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">LOGIN</h5>
+                </div>
+                <div class="modal-body">
+                    <form class="px-4 py-3">
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <div class="input-group flex-nowrap">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="addon-wrapping"><i
+                                            class="fas fa-user-alt"></i></span>
+                                </div>
+                                <input type="email" class="form-control" id="email" placeholder="email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <div class="input-group flex-nowrap">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="addon-wrapping"><i class="fas fa-key"></i></span>
+                                </div>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-success" data-dismiss="modal">Login</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <hr class="my-4">
+                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#register"
+                            data-dismiss="modal">No tienes cuenta! Registrate aqui</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DEL LOGIN-->
+    <!-- INICIO REGISTER-->
+    <div class="modal" tabindex="-1" role="dialog" id="register">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">REGISTER</h5>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-6">
+                                <input type="text" class="form-control" id="nombres" placeholder="Nombre o Nombres">
+                            </div>
+                            <div class="form-group col-6">
+                                <input type="email" class="form-control" id="correo" placeholder="Tu correo">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="contraseña" placeholder="Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" id="confcontraseña"
+                                placeholder="Confirmar Contraseña">
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-control" id="fecha" placeholder="01/01/200">
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Mujer
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Hombre
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="url" class="form-control" id="url" placeholder="Url de Imagen de Perfil">
+                        </div>
+                        <button type="submit" class="btn btn-success">Registrarse</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- FIN DEL REGISTER-->
+    <!--INICIO DETALLES DE USUARIO-->
+    <div class="modify">
+        <div class="modal-body">
+            <img src="https://randomuser.me/api/portraits/men/1.jpg" class="rounded-circle">
+            <a href="#" class="btn btn-primary btn-lg active rounded-circle" role="button" aria-pressed="true" data-toggle="modal"
+                    data-target="#borrar3"><i class="fas fa-camera"></i></a>
+            <div class="media-body ">
+                <h5 class="mt-0 mb-1">Jhon Doe</h5>
+                <p>Correo: jhondoe@gmail.com</p>
+                <p>Fecha de Nacimiento: 1/12/2005</p>
+                <p>Sexo: Hombre</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <img src="https://randomuser.me/api/portraits/women/40.jpg" class="rounded-circle">
+            <a href="#" class="btn btn-primary btn-lg active rounded-circle" role="button" aria-pressed="true" data-toggle="modal"
+                    data-target="#borrar3"><i class="fas fa-camera"></i></a>
+            <div class="media-body ">
+                <h5 class="mt-0 mb-1">Maria Espinoza</h5>
+                <p>Correo: maria@gmail.com</p>
+                <p>Fecha de Nacimiento: 05/11/2000</p>
+                <p>Sexo: Mujer</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <img src="https://randomuser.me/api/portraits/women/82.jpg" class="rounded-circle">
+            <a href="#" class="btn btn-primary btn-lg active rounded-circle" role="button" aria-pressed="true" data-toggle="modal"
+                    data-target="#borrar3"><i class="fas fa-camera"></i></a>
+            <div class="media-body ">
+                <h5 class="mt-0 mb-1">Fernanda Espinoza</h5>
+                <p>Correo: fernanda@gmail.com</p>
+                <p>Fecha de Nacimiento: 05/06/2007</p>
+                <p>Sexo: Mujer</p>
+            </div>
+        </div>
+    </div>
+    <!--FIN DETALLES DE USUARIO-->
+
+    <footer>
+        <div class="row">
+            <div class="col-sm-4 d-flex flex-column" id="redes">
+                <a href="http://www.facebook.com">Facebook</a>
+                <a href="http://www.youtube.com">Youtube</a>
+                <a href="http://www.instagram.com">Instagram</a>
+                <a href="https://github.com">Github</a>
+            </div>
+
+            <div class="col-sm-4 d-flex flex-column align-items-end">
+                <address>
+                    <h3>Informacion</h3>
+                    <p> Loja, Universidad Nacional de Loja, Ecuador</p>
+                    <p> +593993194949</p>
+                    <p> kevin.cumbicus29@gmail.com</p>
+                </address>
+            </div>
+        </div>
+    </footer>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

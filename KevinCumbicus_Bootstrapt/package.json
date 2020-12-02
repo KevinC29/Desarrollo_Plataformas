@@ -1,0 +1,17 @@
+{
+  "name": "tarea",
+  "version": "1.0.0",
+  "description": "tarea de bootstrapt, html y css",
+  "main": "index.html",
+  "scripts": {
+    "dev": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kevin Cumbicus",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  }
+}
