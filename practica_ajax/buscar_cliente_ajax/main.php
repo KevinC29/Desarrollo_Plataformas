@@ -23,7 +23,7 @@
     <h2>Mis Clientes</h2>
     <select name="clientes" onchange="mostrarDescripcion(this.value)">
         <?php
-        $con = @mysqli_connect("localhost", "root", "1234", "pruebaajax");
+        $con = @mysqli_connect("localhost", "root", "7410", "pruebaajax");
         if (!$con) {
             echo "<p> Error al conectar con la BD " . mysqli_connect_error() . "</p>";
             exit;
