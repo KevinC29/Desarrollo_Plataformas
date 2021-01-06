@@ -1,4 +1,5 @@
 from pathlib import Path
+from django.urls import reverse_lazy
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -27,9 +28,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'apps.modelo',
+    'apps.login',
     'apps.gestion_clientes',
     'apps.transacciones',
-    'apps.login',
 ]
 
 MIDDLEWARE = [
@@ -92,6 +93,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+LOGIN_URL = reverse_lazy('autenticar') #estatica
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
