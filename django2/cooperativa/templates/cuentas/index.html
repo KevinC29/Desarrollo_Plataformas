@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    {% extends 'master.html' %}
+    {% block contenido %}
+    <h1>Cuentas del Cliente</h1>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre Completo</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <th>{{cliente.cedula}}</th>
+                <td>{{cliente.nombres}} {{cliente.apellidos}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Numero</th>
+                <th>Saldo</th>
+                <th>Estado</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            {% for cuenta in cuentas %}
+            <tr>
+                <td><a href="{% url 'modificarCuenta' cuenta.numero%}">{{cuenta.numero}}</a></td>
+                <td>{{cuenta.saldo}}</td>
+                <td>{{cuenta.estado}}</td>
+                <td>{{cuenta.tipoCuenta}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'crearCuentas' cliente.cedula%}" type="button" class="btn btn-primary">Nueva Cuenta</a>
+    {% endblock %}
+</body>
+
+</html>

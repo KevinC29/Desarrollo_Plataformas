@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">Cliente</th>
+                <th scope="col">Cedula</th>
+                <th scope="col">Correo</th>
+                <th scope="col">Numero de Cuenta</th>
+                <th scope="col">Tipo de Cuenta</th>
+                <th scope="col">Saldo</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Deposito</th>
+                <th scope="col">Retiro</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <td>{{cliente.apellidos}} {{cliente.nombres}}</td>
+                <td>{{cliente.cedula}}</td>
+                <td>{{cliente.correo}}</td>
+                <td>{{cuenta.numero}}</td>
+                <td>{{cuenta.tipoCuenta}}</td>
+                <td>{{cuenta.saldo}}</td>
+                <td>{{cuenta.estado}}</td>
+                <td><a href="{% url 'depositar' cuenta.numero %}">Deposito</a></td>
+                <td><a href="{% url 'retirar' cuenta.numero %}">Retiro</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+
+</html>

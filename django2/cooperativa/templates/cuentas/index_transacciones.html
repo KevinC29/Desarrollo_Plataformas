@@ -1,0 +1,44 @@
+{% extends "master.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+{% block contenido %}
+<body class="bg-secondary ">
+    
+    <form method="post">{% csrf_token %}
+        <input name="busqueda" placeholder="Ingrese su búsqueda">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Numero</th>
+                <th>Saldo</th>
+                <th>Estado</th>
+                <th>Tipo</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            {% for cuenta in listaCuentas %}
+            <tr>
+                <td><a href="{% url 'cuenta_cliente' cuenta.numero %}">{{cuenta.numero}}</a></td>
+                <td>{{cuenta.saldo}}</td>
+                <td>{{cuenta.estado}}</td>
+                <td>{{cuenta.tipoCuenta}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    
+</body>
+{% endblock %}
+</html>
