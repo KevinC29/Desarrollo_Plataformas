@@ -6,18 +6,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
-<body class="bg-secondary ">
+<body class="bg-secondary" >
     {% extends 'master.html' %}
 
     {% block contenido %}
 
-    <div class="jumbotron ">
-        <h1 class="display-4 text-center">PRACTICA DJANGO - COOPERATIVA</h1>
-        <p class="lead">La cooperativa de ahora y crédito permite el ahorro familiar.</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/clientes/" role="button">Ir a consultas</a>
+    <div class="card start-50 translate-middle-x" style="width: 35rem; height: 15rem;">
+        <div class="card-header">
+            <h5 class="card-title text-center">PRACTICA DJANGO - COOPERATIVA</h5>
+        </div>
+        <div class="card-body">
+            <p class="lead">La cooperativa de ahora y crédito permite el ahorro familiar.</p>
+            <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/clientes/" role="button">Ir a consultas</a>
+        </div>
     </div>
-
+    
     {% endblock %}
 
 
