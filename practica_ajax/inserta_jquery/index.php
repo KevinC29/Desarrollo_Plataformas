@@ -5,6 +5,15 @@
 	<script src="jquery-3.2.1.min.js"></script>
 </head>
 <body>
+		<div class="card">
+            <div class="card-body">
+                <p class="text-center">
+                    Kevin Jeison Cumbicus Solano<br>
+                    5to Ciclo "A"<br>
+                    2020-2021<br>
+                </p>
+            </div>
+        </div>
 	<form id="frmajax" method="POST">
 		<label>Nombre</label>
 		<p></p>
