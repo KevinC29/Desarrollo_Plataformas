@@ -35,61 +35,82 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnGuardarBDHelper"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Guardar" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnModificarBDHelper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Modificar" />
+            <Button
+                android:id="@+id/btnGuardarBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Guardar" />
 
-        <Button
-            android:id="@+id/btnEliminarCedulaBDHelper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="EliminarC" />
+            <Button
+                android:id="@+id/btnModificarBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Modificar" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btnEliminarTodosBDHelper"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="EliminarT" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btnBuscarCedulaBDHelper"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="BuscarC" />
+            <Button
+                android:id="@+id/btnEliminarCedulaBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="EliminarC" />
 
-        <Button
-            android:id="@+id/btnBuscarTodosBDHelper"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/btnEliminarTodosBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="EliminarT" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="BuscarT" />
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnBuscarCedulaBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BuscarC" />
+
+            <Button
+                android:id="@+id/btnBuscarTodosBDHelper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BuscarT" />
+        </LinearLayout>
+
     </LinearLayout>
+
 
     <TextView
         android:id="@+id/lblDatosBDHelper"
         android:layout_width="match_parent"
-        android:layout_height="101dp"
+        android:layout_height="178dp"
         android:text="TextView" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerDocente"
         android:layout_width="match_parent"
-        android:layout_height="290dp" />
+        android:layout_height="223dp" />
 
 
 </LinearLayout>

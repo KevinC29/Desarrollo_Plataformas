@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never" />
+
     <item
         android:id="@+id/optionActividades"
         android:title = "Actividades">
@@ -48,6 +44,12 @@
             <item
                 android:id="@+id/optionDS"
                 android:title="ArchivosDS" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/optionSW"
+        android:title="Servicios Web">
+        <menu>
             <item
                 android:id="@+id/optionBD"
                 android:title="BaseDatos" />
