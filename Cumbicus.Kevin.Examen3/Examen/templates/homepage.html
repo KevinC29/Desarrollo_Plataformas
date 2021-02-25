@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <meta>
+    <title>Examen 2021</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="bg-secondary" >
+    {% extends 'master.html' %}
+
+    {% block contenido %}
+
+    <div class="card start-50 translate-middle-x" style="width: 35rem; height: 15rem;">
+        <div class="card-header">
+            <h5 class="card-title text-center">EXAMEN DJANGO - ESTUDIANTES</h5>
+        </div>
+        <div class="card-body">
+            <p class="lead">Gestion Estudiantil - Notas Academicas</p>
+            <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/estudiantes/" role="button">Estudiantes</a>
+        </div>
+    </div>
+    
+    {% endblock %}
+
+
+</body>
+
+</html>

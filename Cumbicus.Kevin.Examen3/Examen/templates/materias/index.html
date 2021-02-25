@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    {% extends 'master.html' %}
+    {% block contenido %}
+    <h1>Materias del Estudiante</h1>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Cédula</th>
+                <th>Nombre Completo</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <th>{{estudiante.cedula}}</th>
+                <td>{{estudiante.nombres}} {{estudiante.apellidos}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Materia</th>
+                <th>Nota1</th>
+                <th>Nota2</th>
+                <th>Nota3</th>
+                <th>Promedio</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            {% for materia in materia %}
+            <tr>
+                <td>{{materia.nombreMateria}}</td>
+                <td>{{materia.nota1}}</td>
+                <td>{{materia.nota2}}</td>
+                <td>{{materia.nota3}}</td>
+                <td>{{materia.promedio}}</td>
+                <td>{{materia.estado}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'crearMaterias' estudiante.cedula%}" type="button" class="btn btn-primary">Nueva Materia</a>
+    {% endblock %}
+</body>
+
+</html>
