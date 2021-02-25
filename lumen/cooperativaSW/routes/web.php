@@ -14,11 +14,6 @@ $router->group(["prefix" => "cliente"], function ($router) {
     $router->post('new', 'ClienteController@create');
 });*/
 
-$router->group(['prefix' => 'usuario'], function($router){
-    $router->post('ingresar', 'UserController@login'); 
-    $router->post('salir', 'UserController@logout'); 
-});
-
 $router->group(['middleware' => 'auth'], function() use ($router){
     $router->group(['prefix' => 'cliente'], function($router){
         $router->get("all", "ClienteController@allSinRestricciones");    
@@ -27,3 +22,16 @@ $router->group(['middleware' => 'auth'], function() use ($router){
         $router->post('new', 'ClienteController@create');
     });
 });
+$router->group(['prefix' => 'usuario'], function($router){
+    $router->post('ingresar', 'UserController@login'); 
+    $router->post('salir', 'UserController@logout'); 
+});
+
+/*
+    $router->group(['middleware' => 'auth'], function() use ($router){
+        $router->group(['prefix' => 'cliente'], function($router){
+            $router->post('new', 'ClienteController@create');
+        });
+    });
+*/
+
