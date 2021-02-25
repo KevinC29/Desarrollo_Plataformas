@@ -2,13 +2,13 @@
 namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
-class Cuenta extends Model
+class Transaccion extends Model
 {
-    protected $table = 'modelo_cuenta';
-    protected $fillable = ['numero', 'fechaApertura', 'tipoCuenta',  'saldo', 'estado', 'date_created','cliente_id'];
+    protected $table = 'modelo_transaccion';
+    protected $fillable = ['fecha', 'tipo', 'valor',  'descripcion', 'updated_at', 'cuenta_id'];
     public $timestamps = false; //no se guarda los valores del created_at y update_at
     //public $timestamps = true;
     protected $hidden = [
-        "cuenta_id"      
+        "transaccion_id"      
     ];
 }

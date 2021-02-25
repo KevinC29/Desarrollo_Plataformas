@@ -1,11 +1,11 @@
 <?php
 namespace App\Http\Controllers;
-use App\Models\Cuenta;
+use App\Models\Transaccion;
 use Illuminate\Http\Request;
 use App\Http\Helper\ResponseBuilder;
 use DB;
 
-class CuentaController extends Controller
+class TransaccionController extends Controller
 {
     
     public function __construct()
@@ -15,19 +15,19 @@ class CuentaController extends Controller
 
     public function allSinRestricciones(Request $request)
     {
-        $cuenta = Cuenta::all();
+        $transaccion = Transaccion::all();
         $status = true;
-        $info = 'Cuenta List';
+        $info = 'Transaccion List';
 
-        return ResponseBuilder::result($status, $info, $cuenta);
+        return ResponseBuilder::result($status, $info, $transaccion);
     }
     
     public function allJson(Request $request){
         if($request->isJson()){
-            $cuenta = Cuenta::all();
+            $transaccion = Transaccion::all();
             $status = true;
-            $info = "Cuentas List";
-            return ResponseBuilder::result($status,$info,$cuenta);
+            $info = "Transacciones List";
+            return ResponseBuilder::result($status,$info,$transaccion);
         }
         $status = false;
         $info = "Anauthorized";
@@ -36,16 +36,16 @@ class CuentaController extends Controller
 
     }
 
-    public function getCuenta(Request $request, $numero){
+    public function getTransaccion(Request $request, $tipo){
         if($request->isJson()){
-            $cuenta = Cuenta::where('numero', $numero)->first();
-            if(!empty($cuenta)){ //que no este vacio
+            $transaccion = Transaccion::where('tipo', $tipo)->first();
+            if(!empty($transaccion)){ //que no este vacio
                $status = true;
-               $info = "Cuenta in here" ;
-               return ResponseBuilder::result($status,$info,$cuenta);
+               $info = "Transaccion in here" ;
+               return ResponseBuilder::result($status,$info,$transaccion);
             }else{
                $status = false;
-               $info = "Cuenta doesn't exist" ;
+               $info = "Transaccion doesn't exist" ;
                return ResponseBuilder::result($status,$info);
             }
         }
@@ -58,17 +58,16 @@ class CuentaController extends Controller
     {
         if ($request->isJson()) {
             $data = $request->json()->all();
-            $cuenta = Cuenta::create([
-                'numero' => $data['numero'],
-                'fechaApertura' => $data['fechaApertura'],
-                'tipoCuenta' => $data['tipoCuenta'],
-                'saldo' => $data['saldo'],
-                "estado" => $data['estado'],
-                "date_created" => $data['date_created'],
-                "cliente_id" => $data['cliente_id'],
+            $transaccion = Transaccion::create([
+                'fecha' => $data['fecha'],
+                'tipo' => $data['tipo'],
+                'valor' => $data['valor'],
+                'descripcion' => $data['descripcion'],
+                "updated_at" => $data['updated_at'],
+                "cuenta_id" => $data['cuenta_id'],
             ]);
             $status = true;
-            $info = "Cuenta creada con exito";
+            $info = "Transaccion creada con exito";
             return ResponseBuilder::result($status, $info);
         }
         return response()->json(['error' => 'Unauthorized'], 401, []);
