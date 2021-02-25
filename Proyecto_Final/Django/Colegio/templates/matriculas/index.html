@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    {% extends 'master.html' %}
+    {% block contenido %}
+    <h1>Matriculas del Curso</h1>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Creditos</th>
+                <th>Docente</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <th>{{curso.codigo}}</th>
+                <td>{{curso.nombre}}</td>
+                <td>{{curso.creditos}}</td>
+                <td>{{curso.docente}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Cedula Estudiante</th>
+                <th>Apellidos Estudiante</th>
+                <th>Nombres Estudiante</th>
+                <th>Curso</th>
+                <th>Fecha Matricula</th>
+
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            {% for matricula in matriculas %}
+            <tr>
+                <td><a href="{% url 'modificarMatriculas' matricula.estudiante.dni%}">{{matricula.estudiante.dni}}</a></td>
+                <td>{{matricula.estudiante.apellidos}}</td>
+                <td>{{matricula.estudiante.nombres}}</td>
+                <td>{{matricula.curso.codigo}}</td>
+                <td>{{matricula.fechaMatricula}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'crearMatriculas' curso.codigo%}" type="button" class="btn btn-primary">Nueva Matricula</a>
+    {% endblock %}
+</body>
+
+</html>

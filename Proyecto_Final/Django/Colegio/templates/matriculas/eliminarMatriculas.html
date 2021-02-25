@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    <div class="jumbotron p-3">
+        <form method="POST"> {% csrf_token %}
+            <div class="form-group">
+                <h2>¿Seguro que desea eliminar la Matricula?
+                </h2>
+                <table class="table">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>Cedula</th>
+                            <th>Apellidos</th>
+                            <th>Nombres</th>
+                            <th>Fecha Nacimiento</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-secondary">
+                        <tr>
+                            <td>{{estudiante.dni}}</td>
+                            <td>{{estudiante.apellidos}}</td>
+                            <td>{{estudiante.nombres}}</td>
+                            <td>{{estudiante.fechaNacimiento}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <button type="submit" class="btn btn-danger">Eliminar</button>
+            <a href="{% url 'matriculas' %}" class="btn btn-dark">Cancelar</a>
+        </form>
+    </div>
+</body>
+</html>
