@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <title>Practica js</title>
+    <link href="css/formulario.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="js/documento.js"></script>
+    <script type="text/javascript" src="js/formulario.js"></script>
+    
+</head>
+<body>
+    <h2>Saludo en Javascript</h2>
+    <input type="button" value="saludar" onclick="saludar()">
+
+    <h2>Suma de dos números</h2>
+    <label>Número 1:</label> <input type="text" name="n1" id="n1">
+    <label>Número 2:</label> <input type="text" name="n2" id="n2">
+    <button onclick="sumar()">Calcular</button>
+
+    <h2>Manejo de Cadenas</h2>
+    <label id="cadena">Pulse aquí para invertir la cadena</label>
+    <button onclick="invertir()">Invertir</button>
+
+    <h2>Validación de Formularios 1</h2>
+    <form>
+        <label>Ingrese sus nombres</label> 
+        <input type="text" name="nombres" id="nombres">
+        <button onclick="validarFormulario()">Registrar</button>
+    </form>
+
+    <h2>Validación de Formularios 2</h2>
+    <form name="formulario">
+        <label>Ingrese sus nombres</label>
+        <input type="text" name="nombres1" id="nombres1"> <span id="mensaje_nombres"></span> <br>
+        <label>Ingrese sus email</label>
+        <input type="email" name="email" id="email"> <span id="mensaje_email"></span> <br>
+        <label>Ingrese su Clave</label>
+        <input type="password" name="password" id="password"> <span id="mensaje_password"></span> <br>
+        <label>Repetir Clave</label>
+        <input type="password" name="password1" id="password1"> <span id="mensaje_password1"></span> <br>
+        <button type="button" id="btn_validar" >Registrar</button>
+    </form>
+</body>
+
+</html>
