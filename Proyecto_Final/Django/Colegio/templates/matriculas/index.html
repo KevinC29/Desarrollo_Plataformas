@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+
+<body class="bg-secondary ">
+    {% extends 'master.html' %}
+    {% block contenido %}
+    <div class="card" style="margin-bottom: 20px; margin-top: 20px;">
+        <div class="card-body">
+            <h1 class="text-center">Matriculas del Curso</h1>
+        </div>
+    </div>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Creditos</th>
+                <th>Docente</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            <tr>
+                <th>{{curso.codigo}}</th>
+                <td>{{curso.nombre}}</td>
+                <td>{{curso.creditos}}</td>
+                <td>{{curso.docente}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table class="table table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>Cedula Estudiante</th>
+                <th>Apellidos Estudiante</th>
+                <th>Nombres Estudiante</th>
+                <th>Curso</th>
+                <th>Fecha Matricula</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody class="table-secondary">
+            {% for matricula in matriculas %}
+            <tr>
+                <td>{{matricula.estudiante.dni}}</td>
+                <td>{{matricula.estudiante.apellidos}}</td>
+                <td>{{matricula.estudiante.nombres}}</td>
+                <td>{{matricula.curso.codigo}}</td>
+                <td>{{matricula.fechaMatricula}}</td>
+                <td><a href="{% url 'modificarMatriculas' matricula.estudiante.dni%}" class="btn btn-warning">Modificar</a></td>
+                <td><a href="{% url 'eliminarMatriculas' matricula.estudiante.dni%}" class="btn btn-danger mr-3">Eliminar</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'crearMatriculas' curso.codigo%}" type="button" class="btn btn-primary" style="margin-bottom: 25px; margin-left: 25px;">Nueva Matricula</a>
+    {% endblock %}
+</body>
+
+</html>

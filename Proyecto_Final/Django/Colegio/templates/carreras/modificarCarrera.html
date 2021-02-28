@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Modificar Carrera</title>
+</head>
+
+<body class="bg-secondary ">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="text-center">Carrera a modificar {{carrera.codigo}}
+            </h2>
+        </div>
+    </div>
+    <form method="POST">
+        <div class="form-control-sm position-absolute top-50 start-50 translate-middle">
+            <div class="border-top border-bottom border-primary border-4 p-3 mb-2 bg-dark text-white rounded-3">
+                {% csrf_token %}
+                {{formulario_carrera_editar.as_p}}
+                <button type="submit" value="Guardar" class="btn btn-primary">Guardar</button>
+                <a href="{% url 'carreras' %}" type="button" class="btn btn-secondary">Cancelar</a>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>

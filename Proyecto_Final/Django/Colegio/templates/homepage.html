@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta>
+    <title>Proyecto Final</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body class="bg-secondary" >
+    {% extends 'master.html' %}
+
+    {% block contenido %}
+
+    <div class="card start-50 translate-middle-x" style="width: 35rem; height: 15rem;">
+        <div class="card-header">
+            <h5 class="card-title text-center">PROYECTO FINAL - DAB</h5>
+        </div>
+        <div class="card-body">
+            <p class="lead">Instituto Academico que Ayuda a la Formación Académica de los Futuros Profesionales</p>
+            <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/carreras/" role="button">Ver Carreras</a>
+            <a class="btn btn-primary btn-lg" href="http://127.0.0.1:8000/cursos/" role="button">Ver Cursos</a>
+        </div>
+    </div>
+    
+    {% endblock %}
+
+
+</body>
+
+</html>
