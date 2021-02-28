@@ -16,59 +16,5 @@
             "genero": "M",
             "vigencia": 1,
             "carrera_id": 1
-        },
-        {
-            "dni": "12",
-            "apellidos": "Guayllas",
-            "nombres": "Jhon",
-            "fechaNacimiento": "2001-08-30",
-            "genero": "M",
-            "vigencia": 1,
-            "carrera_id": 2
-        },
-        {
-            "dni": "13",
-            "apellidos": "Espinoza",
-            "nombres": "Albertina",
-            "fechaNacimiento": "2002-06-29",
-            "genero": "F",
-            "vigencia": 1,
-            "carrera_id": 2
-        },
-        {
-            "dni": "14",
-            "apellidos": "Chuquirima",
-            "nombres": "Mirian",
-            "fechaNacimiento": "1999-06-24",
-            "genero": "F",
-            "vigencia": 1,
-            "carrera_id": 3
-        },
-        {
-            "dni": "15",
-            "apellidos": "Solano",
-            "nombres": "Luis",
-            "fechaNacimiento": "1998-07-25",
-            "genero": "M",
-            "vigencia": 1,
-            "carrera_id": 3
-        },
-        {
-            "dni": "40",
-            "apellidos": "ejemplo",
-            "nombres": "ejemplo",
-            "fechaNacimiento": "2001-08-25",
-            "genero": "M",
-            "vigencia": 1,
-            "carrera_id": 1
-        },
-        {
-            "dni": "17",
-            "apellidos": "Calderon",
-            "nombres": "Ana",
-            "fechaNacimiento": "1999-06-30",
-            "genero": "F",
-            "vigencia": 1,
-            "carrera_id": 3
         }
     ]
