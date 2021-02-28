@@ -1,8 +1,32 @@
 {
   "posts": [
-    { "id": 1, "title": "Post 1" },
-    { "id": 2, "title": "Post 2" },
-    { "id": 3, "title": "Post 3" }
+    {
+        "dni": "10",
+        "apellidos": "Cumbicus",
+        "nombres": "Kevin",
+        "fechaNacimiento": "2000-06-29",
+        "genero": "M",
+        "vigencia": 1,
+        "carrera_id": 1
+    },
+    {
+        "dni": "11",
+        "apellidos": "Armijos",
+        "nombres": "Zahid",
+        "fechaNacimiento": "2000-06-30",
+        "genero": "M",
+        "vigencia": 1,
+        "carrera_id": 1
+    },
+    {
+        "dni": "12",
+        "apellidos": "Guayllas",
+        "nombres": "Jhon",
+        "fechaNacimiento": "2001-08-30",
+        "genero": "M",
+        "vigencia": 1,
+        "carrera_id": 2
+    }
   ],
   "comments": [
     { "id": 1, "body": "some comment", "postId": 1 },
