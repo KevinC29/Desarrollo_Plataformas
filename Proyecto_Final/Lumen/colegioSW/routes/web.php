@@ -53,12 +53,12 @@ $router->group(['prefix' => 'usuario'], function($router){
 });
 
 //Servicios del Proyecto
-//$router->group(['prefix' => 'carrera'], function($router){
+$router->group(['prefix' => 'carrera'], function($router){
     $router->get("all", "CarreraController@allSinRestricciones");    
     $router->get("allJson", "CarreraController@allJson");
     $router->get("get/{codigo}", "CarreraController@getCarrera");
     $router->post('new', 'CarreraController@createCarrera');
-//});
+});
 $router->group(['prefix' => 'curso'], function($router){
     $router->get("all", "CursoController@allSinRestricciones");    
     $router->get("allJson", "CursoController@allJson");
