@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActividadInsertarEstudiante">
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="730dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="3dp">
+
+        <TextView
+            android:id="@+id/lblEstudiantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FORMULARIO ESTUDIANTE" />
+
+        <EditText
+            android:id="@+id/txtIngresarDNI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Cedula" />
+
+        <EditText
+            android:id="@+id/txtIngresarApellidos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Apellidos" />
+
+        <EditText
+            android:id="@+id/txtIngresarNombres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Nombres" />
+
+        <EditText
+            android:id="@+id/txtIngresarFecha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Fecha Nacimiento" />
+
+        <EditText
+            android:id="@+id/txtIngresarGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Genero" />
+
+        <EditText
+            android:id="@+id/txtIngresarVigencia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Vigencia" />
+
+        <EditText
+            android:id="@+id/txtIngresarCarrera_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Carrera_id" />
+
+        <Button
+            android:id="@+id/btnIngresar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Agregar Estudiante" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

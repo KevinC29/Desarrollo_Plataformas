@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_carreras"
+            android:title="Carreras" />
+        <item
+            android:id="@+id/nav_cursos"
+            android:title="Cursos" />
+        <item
+            android:id="@+id/nav_matriculas"
+            android:title="Matriculas" />
+        <item
+            android:id="@+id/nav_estudiantes"
+            android:title="Estudiantes" />
+    </group>
+</menu>
