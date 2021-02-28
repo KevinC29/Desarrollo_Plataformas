@@ -25,14 +25,5 @@
         "genero": "M",
         "vigencia": 1,
         "carrera_id": 2
-    },
-    {
-        "dni": "13",
-        "apellidos": "Espinoza",
-        "nombres": "Albertina",
-        "fechaNacimiento": "2002-06-29",
-        "genero": "F",
-        "vigencia": 1,
-        "carrera_id": 2
     }
 ]
