@@ -9,28 +9,7 @@
 			"name": "login",
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "Kevin",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "7410",
-							"type": "text"
-						}
-					]
-				},
+				"header": [],
 				"url": {
 					"raw": "http://localhost:9000/usuario/ingresar",
 					"protocol": "http",
@@ -65,7 +44,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"codigo\": \"500\",\r\n    \"nombre\": \"BGU\",\r\n    \"duracion\": \"3\"\r\n}"
+					"raw": "{\r\n    \"codigo\": \"12589603\",\r\n    \"nombre\": \"Liza2\",\r\n    \"duracion\": \"femenino\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:9000/carrera/new",
@@ -233,31 +212,9 @@
 			"name": "getCarreras",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/carrera/get/432",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"carrera",
-						"get",
-						"432"
-					]
+					"raw": ""
 				}
 			},
 			"response": []
@@ -266,30 +223,9 @@
 			"name": "getEstudiante",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/estudiante/get/11",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"estudiante",
-						"get",
-						"11"
-					]
+					"raw": ""
 				}
 			},
 			"response": []
@@ -298,30 +234,9 @@
 			"name": "getMatricula",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/matricula/get/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"matricula",
-						"get",
-						"2"
-					]
+					"raw": ""
 				}
 			},
 			"response": []
@@ -330,27 +245,16 @@
 			"name": "allJson Carreras",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/allJson",
+					"raw": "http://localhost:9000/carrera/allJson",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9000",
 					"path": [
+						"carrera",
 						"allJson"
 					]
 				}
@@ -361,28 +265,16 @@
 			"name": "allJson Cursos",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/curso/allJson",
+					"raw": "http://localhost:9000/carrera/allJson",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9000",
 					"path": [
-						"curso",
+						"carrera",
 						"allJson"
 					]
 				}
@@ -393,27 +285,16 @@
 			"name": "allJson Matriculas",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "SRzWSeoGdk03XBIy7HGpfbBX15Oy1eckOQbBIyifTPa9OR5OSaYMQEAXSANUq3OzSU11PO6oBlMLz24lRe6YiGg8raiYWtaZxfLZXcmMXDgyCvjmI8d89AxiJStBV1feGQRVVPX4DSRjrQP4bXUsNb",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/matricula/allJson",
+					"raw": "http://localhost:9000/carrera/allJson",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9000",
 					"path": [
-						"matricula",
+						"carrera",
 						"allJson"
 					]
 				}
@@ -437,14 +318,14 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:9000/estudiante/allJson",
+					"raw": "http://localhost:9000/carrera/allJson",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "9000",
 					"path": [
-						"estudiante",
+						"carrera",
 						"allJson"
 					]
 				}
@@ -455,30 +336,9 @@
 			"name": "getCurso",
 			"request": {
 				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "api_token",
-						"value": "t8maQYNascb8CbK7VxCBacDQJ7qNpIvKlgD6A1R12A0M9Ns5EjalZcWyC4j95Yc9z1E5XmNxFVybKt7ur6UzpJTIy1X44PNRswSDued7g3tTi9xIfnOtZfetiTdVVvTldDyKr09kruS8koH7YAdXm5",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"url": {
-					"raw": "http://localhost:9000/curso/get/2",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "9000",
-					"path": [
-						"curso",
-						"get",
-						"2"
-					]
+					"raw": ""
 				}
 			},
 			"response": []

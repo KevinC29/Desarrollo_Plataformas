@@ -43,10 +43,6 @@ public class ActividadMostrarEstudiante extends AppCompatActivity {
         estudiantes = new ArrayList<>();
         extraerEstudiantes();
 
-
-
-        //iniciarComponentes();
-        //stringRequest();
     }
 
     private void extraerEstudiantes() {
@@ -79,28 +75,4 @@ public class ActividadMostrarEstudiante extends AppCompatActivity {
         });
         queue.add(jsonArrayRequest);
     }
-
-    /*private void iniciarComponentes() {
-        textView = findViewById(R.id.textViewEstudiantes);
-    }*/
-
-    /*private void stringRequest(){
-        StringRequest request = new StringRequest(
-                Request.Method.GET,
-                URL,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        textView.setText(response);
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                    }
-                }
-        );
-        requestQueue.add(request);
-    }*/
 }
