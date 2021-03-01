@@ -44,7 +44,7 @@ public class ActividadInsertarEstudiante extends AppCompatActivity {
         vigencia =findViewById(R.id.txtIngresarVigencia);
         carrera = findViewById(R.id.txtIngresarCarrera_id);
         btn_submit = findViewById(R.id.btnIngresar);
- 
+
         btn_submit.setOnClickListener((view)->{
             postEstudiante();
         });

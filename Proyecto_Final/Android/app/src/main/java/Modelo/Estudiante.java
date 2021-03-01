@@ -3,13 +3,19 @@ package Modelo;
 import com.google.gson.annotations.SerializedName;
 
 public class Estudiante {
-
+    @SerializedName("dni")
     private String dni;
+    @SerializedName("apellidos")
     private String apellidos;
+    @SerializedName("nombres")
     private String nombres;
+    @SerializedName("fechaNacimiento")
     private String fechaNacimiento;
+    @SerializedName("genero")
     private String genero;
+    @SerializedName("vigencia")
     private String vigencia;
+    @SerializedName("carrera_id")
     private String carrera_id;
 
     public Estudiante(){}
