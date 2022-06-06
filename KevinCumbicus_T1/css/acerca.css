@@ -87,7 +87,7 @@ body{
 .main{
     width: 85%;
     max-width: 1000px;
-    margin: 150px 150px;
+    margin: 150px;
     color: whitesmoke;
     display: flex;
     align-items: center;
