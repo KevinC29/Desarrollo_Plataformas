@@ -21,7 +21,7 @@ body{
     background-color: blue;
     float: none;
     text-align: center;
-    margin: 20px 0px 20px 0px;
+    margin: 20px 0;
     height: 70px;
     border: solid black 2px;
 }
@@ -82,7 +82,7 @@ body{
 }
 #contIzquierdo #contenedor1{
     text-align: center;
-    margin: 20px 10px 0px 10px;
+    margin: 20px 10px 0;
     background-color: lightslategray;
 }
 #contIzquierdo #contenedor2{
@@ -96,7 +96,7 @@ body{
     width: 66%;              
     border: solid black 2px;
     height: 300px;
-    margin: 0px 20px 0px 20px;
+    margin: 0 20px;
 }
 #content{
     display: inline-flex;
@@ -112,7 +112,7 @@ h3{
     width: 50%;
 }
 p{
-    margin: 0px 20px 0px 20px;
+    margin: 0 20px;
 }
 #contDerecho{
     background-color: #00cccc;

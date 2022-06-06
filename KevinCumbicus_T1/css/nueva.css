@@ -156,7 +156,7 @@ input[type="reset"]{
     cursor: pointer;
     border-radius: 20px;
     width: 150px;
-    margin: 20px 20px;
+    margin: 20px;
 }
 input[type="reset"]:hover{
     opacity: 1;
@@ -183,7 +183,7 @@ input[type="reset"]:active{
 }
 
 form #imagen #nofoto{
-    margin: 0px 120px;
+    margin: 0 120px;
 }
 
 #item1{

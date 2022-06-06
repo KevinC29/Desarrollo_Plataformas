@@ -6,7 +6,7 @@ body{
 .jumbotron{
     background-color: darkgrey;
     color: black;
-    margin:  150px 150px;
+    margin:  150px;
     height: 400px;
     text-align: center;
 }
@@ -60,7 +60,7 @@ footer{
     width: 100px;
 }
 .media-right a{
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .media-left{
@@ -68,7 +68,7 @@ footer{
 }
 
 #buscador{
-    margin: 100px auto 0px;
+    margin: 100px auto 0;
     display: flex;
     justify-content:center
 }
