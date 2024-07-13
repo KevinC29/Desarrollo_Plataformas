@@ -13,7 +13,7 @@
     "lite-server": "^2.6.1"
   },
   "dependencies": {
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^5.0.0",
     "jquery": "^3.5.1",
     "open-iconic": "^1.1.1",
     "popper.js": "^1.16.1"
